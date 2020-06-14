@@ -1,12 +1,18 @@
 
 public class Cat implements Cloneable
 {
+    public static final int EYES_AMOUNT = 2;
+    public static final double MIN_WEIGHT = 1000.0;
+    public static final double MAX_WEIGHT = 9000.0;
+
     private Double originWeight;
     private Double weight;
     private Double minWeight;
     private Double maxWeight;
     private double eatenFood;
     private static int count;
+    private String color;
+
 
     public Cat()
     {
@@ -37,6 +43,14 @@ public class Cat implements Cloneable
     public Cat(Cat other)
     {
         this(other.weight, other.originWeight, other.minWeight, other.maxWeight, other.eatenFood);
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     protected void setEatenFood (double eatenFood) {

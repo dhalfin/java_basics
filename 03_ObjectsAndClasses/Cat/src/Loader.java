@@ -34,9 +34,12 @@ public class Loader {
         System.out.println("Eaten food equal to " + sam.getEatenFood());
     }
 
-    public static Cat getKitten()
+    private static Cat getKitten()
     {
-        double weight = 100 + 100 * Math.random();
-        return new Cat(weight, 50.0, 350.0);
+        //double weight = 100 + 100 * Math.random();
+        double weight = 1100;
+        return new Cat(weight, 50.0, 1200.0);
     }
+
+
 }

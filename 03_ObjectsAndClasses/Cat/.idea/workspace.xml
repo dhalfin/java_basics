@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3566954-15db-468d-82d7-9b60a8957e26" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Cat_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Experiments/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Experiments/.idea/libraries/airport_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Experiments/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Experiments/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Experiments/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Experiments/Experiments.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Experiments/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoadController/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RoadController/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoadController/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RoadController/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoadController/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RoadController/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoadController/src/core/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RoadController/src/core/Car.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -36,9 +51,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Cat" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RoadController" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
@@ -158,18 +174,50 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="958" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1592130559288">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="958" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1592130559288" />
+    <state x="748" y="219" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592136165680">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="748" y="219" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.864@0.0.1536.864" timestamp="1592136165680" />
     <state x="543" y="576" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1592041672417">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="543" y="576" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.864@0.0.1536.864" timestamp="1592041672417" />
-    <state x="511" y="202" key="FileChooserDialogImpl" timestamp="1592062335557">
+    <state x="511" y="202" key="FileChooserDialogImpl" timestamp="1592131421287">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="511" y="202" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1592062335557" />
+    <state x="511" y="202" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1592131421287" />
+    <state width="723" height="99" key="GridCell.Tab.0.bottom" timestamp="1592136358073">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="723" height="99" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1592136358073" />
+    <state width="723" height="99" key="GridCell.Tab.0.center" timestamp="1592136358073">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="723" height="99" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1592136358073" />
+    <state width="723" height="99" key="GridCell.Tab.0.left" timestamp="1592136358072">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="723" height="99" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1592136358072" />
+    <state width="723" height="99" key="GridCell.Tab.0.right" timestamp="1592136358073">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="723" height="99" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1592136358073" />
+    <state x="498" y="10" key="SettingsEditor" timestamp="1592136327674">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="498" y="10" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1592136327674" />
     <state x="427" y="271" key="com.intellij.ide.util.TipDialog" timestamp="1592062290332">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="427" y="271" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1592062290332" />
+    <state x="323" y="105" key="new project wizard" timestamp="1592131452230">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="323" y="105" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1592131452230" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
