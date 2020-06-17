@@ -14,9 +14,9 @@ public class Main
         Short d6 = Short.MAX_VALUE;
         Long d7 = Long.MIN_VALUE;
         Long d8 = Long.MAX_VALUE;
-        Float d9 = Float.MIN_VALUE;
+        Float d9 = -Float.MAX_VALUE;
         Float d10 = Float.MAX_VALUE;
-        Double d11 = Double.MIN_VALUE;
+        Double d11 = -Double.MAX_VALUE;
         Double d12 = Double.MAX_VALUE;
 
         System.out.print("Byte: " + d1 + " " + d2 + "\n"
