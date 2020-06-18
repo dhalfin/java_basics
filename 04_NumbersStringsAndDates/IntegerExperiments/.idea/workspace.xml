@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81047b01-fe16-40ca-a996-3f53a13fd417" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ReplaceDiamonds/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReplaceDiamonds/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReplaceDiamonds/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReplaceDiamonds/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReplaceDiamonds/ReplaceDiamonds.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReplaceDiamonds/src/Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
