@@ -3,14 +3,14 @@ import java.util.regex.Pattern;
 
 public class Loader {
 
-    private static final Pattern PHONE_PATTERN = Pattern.compile("^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$");
+    private static final Pattern PHONE_PATTERN = Pattern.compile("^((8|\\+7)[\\-]?)?(\\(?\\d{3}\\) ?[\\-]?)?[\\d\\-]{7,10}$");
     public static boolean isPhone(String string) { return PHONE_PATTERN.matcher(string).matches(); }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Пожалуйста, введите номер телефона: ");
         String command = scanner.nextLine();
-        String temp = command.replaceAll("[()\\-\\+\\s]", "");
+        String temp = command.replaceAll("[()\\-+\\s]", "");
         int span = temp.length();
         if (temp.substring(0, 1).equals("7") || temp.substring(0, 1).equals("8") || span == 10) {
             if (span == 10 || span == 11) {

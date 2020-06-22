@@ -19,7 +19,8 @@ public class Loader {
         text = text.trim();
         String placeholder = "***";
         //String text = "«Номер кредитной карты <4008 1234 5678> 8912»";
-        String a = text.replaceAll("<.+>", placeholder);
+        //String a = text.replaceAll("<.+>", placeholder);
+        String a = text.replaceAll("<.+?>", placeholder);
         return a;
     }
 }

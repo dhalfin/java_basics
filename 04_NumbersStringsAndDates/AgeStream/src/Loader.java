@@ -1,6 +1,8 @@
 import java.text.DateFormat;
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.util.*;
 
 public class Loader {
@@ -25,6 +27,7 @@ public class Loader {
 
         Calendar now = new GregorianCalendar();
         DateFormat outputFormat = new SimpleDateFormat("dd.MM.yyyy - EEE", Locale.UK);
+        //DateTimeFormatter printFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy - EEE", new Locale("ru"));
 
         for(int i = 0; !birthday.after(now); i++) {
             System.out.println(i + " - " + outputFormat.format(birthday.getTime()));
