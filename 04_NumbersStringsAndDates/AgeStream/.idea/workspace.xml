@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="370bb7ec-9e6e-4c4d-9c37-0b94585f73d2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/Dagger/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/Dagger/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/Dagger/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/Dagger/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/Dagger/Dagger.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/Dagger/src/Loader.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/ReversedArray.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/src/Loader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/TempOfPatients/TempOfPatients.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/TempOfPatients/src/Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LocalDateLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocalDateLoader.java" afterDir="false" />
