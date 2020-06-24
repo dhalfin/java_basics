@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="370bb7ec-9e6e-4c4d-9c37-0b94585f73d2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/LocalDateLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/ReversedArray.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ReversedArray/src/Loader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/TempOfPatients/src/Loader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CheckingRusPhoneNumber/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckingRusPhoneNumber/src/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ReplaceDiamonds/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ReplaceDiamonds/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LocalDateLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocalDateLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +35,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Lesson5_2/Arrays" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.LocalDateLoader">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration name="Loader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Loader" />
+      <module name="AgeStream" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocalDateLoader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LocalDateLoader" />
       <module name="AgeStream" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -69,6 +81,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LocalDateLoader" />
         <item itemvalue="Application.Loader" />
       </list>
     </recent_temporary>
@@ -91,25 +104,29 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="570" y="461" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.864@0.0.1536.864" timestamp="1592500434192" />
-    <state width="723" height="268" key="GridCell.Tab.0.bottom" timestamp="1592829439193">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1592915821411">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="268" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1592829439193" />
-    <state width="723" height="268" key="GridCell.Tab.0.center" timestamp="1592829439193">
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1592915821411" />
+    <state width="723" height="237" key="GridCell.Tab.0.bottom" timestamp="1592944180474">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="268" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1592829439193" />
-    <state width="723" height="268" key="GridCell.Tab.0.left" timestamp="1592829439193">
+    <state width="723" height="237" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1592944180474" />
+    <state width="723" height="237" key="GridCell.Tab.0.center" timestamp="1592944180474">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="268" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1592829439193" />
-    <state width="723" height="268" key="GridCell.Tab.0.right" timestamp="1592829439193">
+    <state width="723" height="237" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1592944180474" />
+    <state width="723" height="237" key="GridCell.Tab.0.left" timestamp="1592944180474">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="723" height="268" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1592829439193" />
-    <state x="849" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1592826766117">
+    <state width="723" height="237" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1592944180474" />
+    <state width="723" height="237" key="GridCell.Tab.0.right" timestamp="1592944180474">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="849" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1592826766117" />
+    <state width="723" height="237" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1592944180474" />
+    <state x="849" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1592915783825">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="849" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1592915783825" />
   </component>
 </project>
