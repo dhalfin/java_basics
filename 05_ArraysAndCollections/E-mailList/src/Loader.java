@@ -19,16 +19,20 @@ public class Loader {
             if (matcher.find()) {
                 String commandType = matcher.group("commandType");
                 String email = matcher.group("email");
-                if (commandType.equals("LIST")) {
-                    for (String name : emailList) {
-                        System.out.println(name);
+                try {
+                    if (commandType.equals("LIST")) {
+                        for (String name : emailList) {
+                            System.out.println(name);
+                        }
+                    } else if (commandType.equals("ADD")) {
+                        if (emailList.contains(email)) {
+                            System.out.println("Этот E-Mail уже существует в списке!");
+                        }
+                        emailList.add(email);
                     }
-                } else if (commandType.equals("ADD")) {
-                    if (emailList.contains(email)) {
-                        System.out.println("Этот E-Mail уже существует в списке!");
-                    }
+                } catch (NullPointerException e) {
+                    System.out.println("Надо ввести E-MAIL!");
                 }
-                emailList.add(email);
             } else {
                     System.out.println("Неправильно введена команда!");
                 }
