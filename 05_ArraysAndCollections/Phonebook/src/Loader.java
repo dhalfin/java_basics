@@ -3,7 +3,6 @@ import java.util.regex.Pattern;
 
 public class Loader {
 
-    //private static final Pattern PHONE_PATTERN = Pattern.compile("^\\+?\\d{1,3}\\s?\\(\\d{3}\\)\\s?\\d{3}(-\\d{2}){2}$");//\\+\\d{11,}
     private static final Pattern PHONE_PATTERN = Pattern.compile("^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$");
     private static final Pattern NAME_PATTERN = Pattern.compile("[A-Z][a-z]* [A-Z][a-z]*");
 
@@ -24,20 +23,16 @@ public class Loader {
         for (; ; ) {
             System.out.println("Please, input a command: ");
             String command = scanner.nextLine();
-            //command.replaceAll("[^0-9]+","");
+            command.replaceAll("[^0-9]+","");
             String temp = command.replaceAll("[()\\-\\s]", "");
-            int span = temp.length();
-            if (span >= 10) {
-                temp = temp.substring(span - 10);
-                temp = "+7" + temp;
-            }
 
             if (isList(command)) {
-                Collection<Map.Entry<String, String>> sorted = SortByValueAsSet(phoneBook);
+                Collection<Map.Entry<String, String>> sorted = sortByValueAsSet(phoneBook);
                 for (Map.Entry<String, String> entry : sorted) {
                     System.out.println(entry.getValue() + " has the number " + entry.getKey());
                 }
             } else if (isPhone(temp)) {
+                normalizationOfNumber(temp);
                 if (phoneBook.containsKey(temp)) {
                     System.out.println("It is a number of " + phoneBook.get(temp));
                 } else {
@@ -62,11 +57,7 @@ public class Loader {
                     System.out.println("Please, input a number for the name " + command);
                     String number = scanner.nextLine();
                     String rightForm = number.replaceAll("[()\\-\\s]", "");
-                    int scale = rightForm.length();
-                    if (scale >= 10) {
-                        rightForm = rightForm.substring(scale - 10);
-                        rightForm = "+7" + rightForm;
-                    }
+                    normalizationOfNumber(rightForm);
                     if (!isPhone(rightForm)) {
                         System.out.println("Invalid name. Command canceled.");
                     } else if (phoneBook.containsKey(rightForm)) {
@@ -82,6 +73,15 @@ public class Loader {
         }
     }
 
+    public static String normalizationOfNumber(String number) {
+        int range = number.length();
+            if (range >= 10) {
+                number = number.substring(range - 10);
+                number = "+7" + number;
+            }
+            return number;
+    }
+
     public static List<String> getKeysForValue(Map<String, String> map, String value) {
         List<String> result = new ArrayList<>();
         for (Map.Entry<String, String> entry : map.entrySet()) {
@@ -92,7 +92,7 @@ public class Loader {
         return result;
     }
 
-    public static List<Map.Entry<String, String>> SortByValueAsList(Map<String, String> map) {
+    public static List<Map.Entry<String, String>> sortByValueAsList(Map<String, String> map) {
         List<Map.Entry<String, String>> result = new ArrayList<>(map.entrySet());
         result.sort(new Comparator<Map.Entry<String, String>>() {
             @Override
@@ -107,7 +107,7 @@ public class Loader {
         return result;
     }
 
-    public static TreeSet<Map.Entry<String, String>> SortByValueAsSet(Map<String, String> map) {
+    public static TreeSet<Map.Entry<String, String>> sortByValueAsSet(Map<String, String> map) {
         TreeSet<Map.Entry<String, String>> result = new TreeSet<>(new Comparator<Map.Entry<String, String>>() {
             @Override
             public int compare(Map.Entry<String, String> first, Map.Entry<String, String> second) {
