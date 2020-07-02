@@ -14,12 +14,7 @@ public class BankAccount {
     }
 
     public double deposit(double amount) {
-        surplus += amount;
-        return surplus;
-    }
-
-    public void setSurplus(double surplus) {
-        this.surplus = surplus;
+        return surplus += amount;
     }
 
     public double getBalance() {
@@ -31,9 +26,5 @@ public class BankAccount {
         return true;
     }
 
-    public class NegativeRemnantException extends Exception {
-        public NegativeRemnantException(double balance, double sum) {
-            super("Недостаточно средств на счёте! \n Баланс: " + balance + "\n Сумма: " + sum);
-        }
-    }
+
 }
