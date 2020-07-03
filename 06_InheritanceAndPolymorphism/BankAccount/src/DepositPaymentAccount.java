@@ -1,8 +1,8 @@
 import java.time.LocalDate;
 
 public class DepositPaymentAccount extends BankAccount {
-    LocalDate dateDeposit = LocalDate.now();
-    LocalDate dateWithdraw = LocalDate.now();
+    private LocalDate dateDeposit = LocalDate.now();
+    private LocalDate dateWithdraw = LocalDate.now();
 
     public DepositPaymentAccount(double surplus) {
         super(surplus);

@@ -1,7 +1,6 @@
 public class CardAccount extends BankAccount {
 
     public CardAccount(double surplus) {
-
         super(surplus);
     }
 

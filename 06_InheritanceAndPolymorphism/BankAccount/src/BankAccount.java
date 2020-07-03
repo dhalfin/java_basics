@@ -1,13 +1,13 @@
 public class BankAccount {
 
-    public double surplus;
+    protected double surplus;
 
     public BankAccount(double surplus) {
         this.surplus = surplus;
     }
 
     public double withdraw(double amount) throws NegativeRemnantException {
-        if(surplus < amount) throw new NegativeRemnantException(surplus, amount);
+        if (surplus < amount) throw new NegativeRemnantException(surplus, amount);
         surplus -= amount;
         System.out.println("Баланс карты: " + surplus);
         return surplus;
