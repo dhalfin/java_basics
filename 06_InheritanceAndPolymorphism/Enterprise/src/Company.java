@@ -1,52 +1,61 @@
-import java.util.*;
-
- public class Company {
-
- private List<Employee> employees_ = new ArrayList<>();
-// private int income;
- public List<Employee> getTopSalaryStaff(int count) {
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 
-  List<Employee> list = new ArrayList<>((Collection<? extends Employee>) (o1, o2) -> {
-  if (o1.getMonthSalary() > o2.getMonthSalary()) {
-    return -1;
-   }
-   if (o1.getMonthSalary() < o2.getMonthSalary()) {
-    return 1;
-   }
-   return 0;
-  });
+public class Company {
 
-  list = employees_;
-  for (int i = 0; i < count; i++) {
-   return employees_.;
-  }
+    private double income;
+    private List<Employee> employees = new ArrayList<>();
 
-   }
+    public Company(double income) {
+        this.income = income;
+    }
 
- public List<Employee> getLowestSalaryStaff(int count) {
-  return null;
- }
+    public Company(double income, List<Employee> employees) {
+        this.income = income;
+        this.employees = employees;
+    }
 
-  public void hire(Employee employee) {
-   employees_.add(employee);
-  }
+    public List<Employee> getEmployees() {
+        return employees;
+    }
 
-  public void hireAll(List<Employee> employees) {
-    List<Employee> newList = new ArrayList<Employee>(employees_);
-    newList.addAll(employees);
-    employees_ = newList;
-  }
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
 
- public void fire(int i) {
-   employees_.remove(i);
- }
+    public double getIncome() {
+        return income;
+    }
 
- public int getIncome() {
-  return (int) (Math.random() * (140000 - 115000) + 115000);
- }
- }
+    public boolean hire(Employee employee) {
+        if (employee != null)
+            return this.employees.add(employee);
+        return false;
+    }
 
+    public boolean hireAll(List<Employee> applicants) {
+        return this.employees.addAll(applicants);
+    }
 
+    public void fire(int i) {
+        employees.remove(i);
+    }
 
+    public List<Employee> getTopSalaryStaff(int count) {
+        employees.sort(Comparator.comparingDouble(Employee::getSalary).reversed());
+        List<Employee> result = new ArrayList<>();
+        for (int i = 0; i < count; i++)
+            result.add(employees.get(i));
+        return result;
+    }
 
+    public List<Employee> getLowestSalaryStaff(int count) {
+        employees.sort(Comparator.comparingDouble(Employee::getSalary));
+        List<Employee> result = new ArrayList<>();
+        for (int i = 0; i < count; i++)
+            result.add(employees.get(i));
+        return result;
+    }
+}

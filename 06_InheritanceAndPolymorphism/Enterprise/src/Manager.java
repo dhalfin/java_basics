@@ -1,18 +1,25 @@
+import conditions.BonusSetting;
+import conditions.PayBet;
 
 public class Manager implements Employee {
 
     private Company company;
-    private int salary = 60000;
-    public void setCompany(Company company) {
+    private Double salary;
+
+    public Manager(Company company) {
         this.company = company;
+        this.salary = getMonthSalary();
+    }
+
+    @Override
+    public Double getSalary() {
+        return salary;
     }
 
 
     @Override
-    public int getMonthSalary() {
-        if (company != null) {
-            return salary = (int) (salary + company.getIncome() * 0.05);
-        }
-        return salary;
+    public Double getMonthSalary() {
+        return PayBet.MANAGER.getBet() * getTimeWorkedPerMonth() +
+                company.getIncome() * BonusSetting.MANAGER.getBonusAmount();
     }
 }

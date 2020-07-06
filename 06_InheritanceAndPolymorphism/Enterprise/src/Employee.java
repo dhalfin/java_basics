@@ -1,7 +1,11 @@
-import java.math.BigDecimal;
 
 public interface Employee {
 
-    public int getMonthSalary();
+    default double getTimeWorkedPerMonth() {
+        return 165 * Math.random();
+    }
 
+    Double getMonthSalary();
+
+    Double getSalary();
 }
