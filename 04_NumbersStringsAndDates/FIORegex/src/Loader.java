@@ -22,7 +22,7 @@ public class Loader {
 
     public static String[] extractFIO(String fio) {
         Matcher matcher = FIO_PATTERN.matcher(fio);
-        if(matcher.matches()) {
+        if (matcher.matches()) {
             return new String[] { matcher.group(1), matcher.group(2), matcher.group(3)};
         }
         else {

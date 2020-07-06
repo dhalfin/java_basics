@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a47d78f7-7891-436d-9c1f-f50cbd38553d" name="Default" comment="" />
+    <list default="true" id="a47d78f7-7891-436d-9c1f-f50cbd38553d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ToDoList/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ToDoList/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ToDoList/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ToDoList/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ToDoList/ToDoList.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/ToDoList/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AgeStream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AgeStream/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AgeStream/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AgeStream/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AgeStream/src/LocalDateLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AgeStream/src/LocalDateLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIORegex/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FIORegex/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +26,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1dRkmY7HkQf8cW05jnmOXuaOLnE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />

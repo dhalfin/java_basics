@@ -27,8 +27,9 @@ public class Loader {
                     } else if (commandType.equals("ADD")) {
                         if (emailList.contains(email)) {
                             System.out.println("Этот E-Mail уже существует в списке!");
+                        } else {
+                            emailList.add(email);
                         }
-                        emailList.add(email);
                     }
                 } catch (NullPointerException e) {
                     System.out.println("Надо ввести E-MAIL!");

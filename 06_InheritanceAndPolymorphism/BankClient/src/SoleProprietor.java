@@ -10,6 +10,19 @@ public class SoleProprietor extends Client {
         return sumOfMoney;
     }
 
+    public BigDecimal pullMoney(BigDecimal amount) throws NegativeRemnantException {
+        if (sumOfMoney.compareTo(amount) == -1) throw new NegativeRemnantException(sumOfMoney, amount);
+        sumOfMoney = sumOfMoney.subtract(amount);
+        System.out.println("Баланс карты: " + sumOfMoney);
+        return super.pullMoney(amount);    }
+
+
+    public BigDecimal putMoney(BigDecimal amount) {
+        BigDecimal amountWithCommission = amount.add(getPutCommission(amount));
+        this.sumOfMoney = sumOfMoney.add(amountWithCommission);
+        return super.sumOfMoney;
+    }
+
     @Override
     protected BigDecimal getPullCommission(BigDecimal amount) {
         return null;
@@ -22,20 +35,6 @@ public class SoleProprietor extends Client {
         } else {
             return amount.multiply(BigDecimal.valueOf(0.005));
         }
-    }
-
-    public BigDecimal pullMoney(BigDecimal amount) throws NegativeRemnantException {
-        if (sumOfMoney.compareTo(amount) == -1) throw new NegativeRemnantException(sumOfMoney, amount);
-        sumOfMoney = sumOfMoney.subtract(amount);
-        System.out.println("Баланс карты: " + sumOfMoney);
-        return super.pullMoney(amount);
-    }
-
-    @Override
-    public BigDecimal putMoney(BigDecimal amount) {
-        BigDecimal amountWithCommission = amount.add(getPutCommission(amount));
-        this.sumOfMoney = sumOfMoney.add(amountWithCommission);
-        return super.sumOfMoney;
     }
 
     @Override

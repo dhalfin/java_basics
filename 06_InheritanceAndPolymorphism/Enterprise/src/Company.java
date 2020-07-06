@@ -1,20 +1,14 @@
-import java.math.BigDecimal;
 import java.util.*;
 
-abstract public class Company {
+ public class Company {
 
- private Manager manager;
- private TopManager topManager;
- private Operator operator;
- private ArrayList<Manager> managers = new ArrayList<>();
- private ArrayList<TopManager> topManagers = new ArrayList<>();
- private ArrayList<Operator> operators = new ArrayList<>();
- public BigDecimal income = BigDecimal.valueOf((Math.random() * (140000 - 115000)) + 115000);
+ private List<Employee> employees_ = new ArrayList<>();
+// private int income;
+ public List<Employee> getTopSalaryStaff(int count) {
 
 
- public ArrayList<Employee> getTopSalaryStaff(int count) {
-  ArrayList<Employee> list = new List<Employee>((Comparator<Employee>) (o1, o2) -> {
-   if (o1.getMonthSalary() > o2.getMonthSalary()) {
+  List<Employee> list = new ArrayList<>((Collection<? extends Employee>) (o1, o2) -> {
+  if (o1.getMonthSalary() > o2.getMonthSalary()) {
     return -1;
    }
    if (o1.getMonthSalary() < o2.getMonthSalary()) {
@@ -22,36 +16,37 @@ abstract public class Company {
    }
    return 0;
   });
+
+  list = employees_;
   for (int i = 0; i < count; i++) {
-   list.add(new Manager())
+   return employees_.;
   }
-  return list;
+
    }
 
  public List<Employee> getLowestSalaryStaff(int count) {
   return null;
  }
 
- public void hire(Manager manager, TopManager topManager, Operator operator) {
-  this.manager = manager;
-  this.topManager = topManager;
-  this.operator = operator;
+  public void hire(Employee employee) {
+   employees_.add(employee);
+  }
+
+  public void hireAll(List<Employee> employees) {
+    List<Employee> newList = new ArrayList<Employee>(employees_);
+    newList.addAll(employees);
+    employees_ = newList;
+  }
+
+ public void fire(int i) {
+   employees_.remove(i);
  }
 
- public void hireAll(ArrayList<Manager> managers, ArrayList<TopManager> topManagers, ArrayList<Operator> operators) {
-  this.managers = managers;
-  this.topManagers = topManagers;
-  this.operators = operators;
+ public int getIncome() {
+  return (int) (Math.random() * (140000 - 115000) + 115000);
+ }
  }
 
- public Manager fire() {
-  return manager;
- }
-
- public BigDecimal getIncome() {
-  return income;
- }
-}
 
 
 

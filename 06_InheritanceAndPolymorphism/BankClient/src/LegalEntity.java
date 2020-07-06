@@ -15,6 +15,13 @@ public class LegalEntity extends Client {
         return super.putMoney(amount);
     }
 
+    public BigDecimal pullMoney(BigDecimal amount) throws NegativeRemnantException {
+        if (sumOfMoney.compareTo(amount) == -1) throw new NegativeRemnantException(sumOfMoney, amount);
+        BigDecimal amountWithCommission = amount.add(getPullCommission(amount));
+        this.sumOfMoney = sumOfMoney.subtract(amountWithCommission);
+        return super.sumOfMoney;
+    }
+
     @Override
     protected BigDecimal getPullCommission(BigDecimal amount) {
         return amount.multiply(BigDecimal.valueOf(0.01));
@@ -23,14 +30,6 @@ public class LegalEntity extends Client {
     @Override
     protected BigDecimal getPutCommission(BigDecimal amount) {
         return null;
-    }
-
-    @Override
-    public BigDecimal pullMoney(BigDecimal amount) throws NegativeRemnantException {
-        if (sumOfMoney.compareTo(amount) == -1) throw new NegativeRemnantException(sumOfMoney, amount);
-        BigDecimal amountWithCommission = amount.add(getPullCommission(amount));
-        this.sumOfMoney = sumOfMoney.subtract(amountWithCommission);
-        return super.sumOfMoney;
     }
 
     @Override

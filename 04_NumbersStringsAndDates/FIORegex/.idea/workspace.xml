@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7277001a-4f04-4a6e-8461-bde235042923" name="Default" comment="" />
+    <list default="true" id="7277001a-4f04-4a6e-8461-bde235042923" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AgeStream/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AgeStream/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AgeStream/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AgeStream/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AgeStream/src/LocalDateLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AgeStream/src/LocalDateLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RegexExperiments/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RegexExperiments/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05_ArraysAndCollections/E-mailList/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../05_ArraysAndCollections/E-mailList/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/BankClient/src/LegalEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/BankClient/src/LegalEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/BankClient/src/PhysicalEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/BankClient/src/PhysicalEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/BankClient/src/SoleProprietor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/BankClient/src/SoleProprietor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/TopManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../06_InheritanceAndPolymorphism/Enterprise/src/TopManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,14 +31,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1dRm784ew7gKwhdKMR6DiIrgCke" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FIO" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -81,10 +102,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="659" y="321" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.864@0.0.1536.864" timestamp="1592396114041" />
-    <state x="560" y="200" key="FileChooserDialogImpl" timestamp="1592396415090">
+    <state x="560" y="200" key="FileChooserDialogImpl" timestamp="1593091845769">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="560" y="200" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1592396415090" />
+    <state x="560" y="200" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1593091845769" />
     <state width="1397" height="237" key="GridCell.Tab.0.bottom" timestamp="1592396418088">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -101,5 +122,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1397" height="237" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1592396418088" />
+    <state x="669" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1593427115750">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="669" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1593427115750" />
   </component>
 </project>

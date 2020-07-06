@@ -14,6 +14,13 @@ public class PhysicalEntity extends Client {
         return super.putMoney(amount);
     }
 
+    public BigDecimal pullMoney(BigDecimal amount) throws NegativeRemnantException {
+        if (sumOfMoney.compareTo(amount) == -1) throw new NegativeRemnantException(sumOfMoney, amount);
+        sumOfMoney = sumOfMoney.subtract(amount);
+        System.out.println("Баланс карты: " + sumOfMoney);
+        return super.pullMoney(amount);
+    }
+
     @Override
     protected BigDecimal getPullCommission(BigDecimal amount) {
         return null;
@@ -22,13 +29,6 @@ public class PhysicalEntity extends Client {
     @Override
     protected BigDecimal getPutCommission(BigDecimal amount) {
         return null;
-    }
-
-    public BigDecimal pullMoney(BigDecimal amount) throws NegativeRemnantException {
-        if (sumOfMoney.compareTo(amount) == -1) throw new NegativeRemnantException(sumOfMoney, amount);
-        sumOfMoney = sumOfMoney.subtract(amount);
-        System.out.println("Баланс карты: " + sumOfMoney);
-        return super.pullMoney(amount);
     }
 
     @Override
