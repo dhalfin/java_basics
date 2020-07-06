@@ -39,7 +39,7 @@ public class Loader {
                 System.out.println("30 самых низких зарплат в компании: ");
                 skyWayGroup.getLowestSalaryStaff(30).forEach(i -> System.out.println(String.format("%,.2f руб.", i.getSalary())));
             } catch (NumberFormatException e) {
-                System.out.println("Нужно ввести введите размер дохода компании в числах! ");
+                System.out.println("Введите размер дохода компании в числах! ");
             }
         }
     }

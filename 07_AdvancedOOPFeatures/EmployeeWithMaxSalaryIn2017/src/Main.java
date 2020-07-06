@@ -1,9 +1,10 @@
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Comparator;
+import java.util.List;
 
 public class Main {
     private static String staffFile = "data/staff.txt";
@@ -11,18 +12,17 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<Employee> staff = loadStaffFromFile();
+        Calendar startOfTerm = Calendar.getInstance();
+        Calendar endOfTerm = Calendar.getInstance();
 
-        staff.sort((p1, p2) -> {
-            if (p1.getSalary().compareTo(p2.getSalary()) == 0) {
-                return p1.getName().compareTo(p2.getName());
-            } else {
-                return p1.getSalary().compareTo(p2.getSalary());
-            }
-        });
+        startOfTerm.set(2016, 11, 31);
+        endOfTerm.set(2018, 00, 01);
 
-        for (Employee employee : staff) {
-            System.out.println(employee);
-        }
+        staff.stream().filter(employee -> employee.getWorkStart()
+                .before(endOfTerm.getTime()) && employee.getWorkStart()
+                .after(startOfTerm.getTime()))
+                .max(Comparator.comparing(e -> e.getSalary()))
+                .ifPresent(System.out::println);
     }
 
     private static ArrayList<Employee> loadStaffFromFile() {
