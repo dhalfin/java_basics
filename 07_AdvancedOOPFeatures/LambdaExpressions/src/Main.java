@@ -11,14 +11,17 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<Employee> staff = loadStaffFromFile();
-
-        staff.sort((p1, p2) -> {
-            if (p1.getSalary().compareTo(p2.getSalary()) == 0) {
-                return p1.getName().compareTo(p2.getName());
-            } else {
-                return p1.getSalary().compareTo(p2.getSalary());
-            }
-        });
+//        staff.sort((p1, p2) -> {
+////            if (p1.getSalary().compareTo(p2.getSalary()) == 0) {
+////                return p1.getName().compareTo(p2.getName());
+////            } else {
+////                return p1.getSalary().compareTo(p2.getSalary());
+////            }
+////        });
+        staff.sort(Comparator.comparingInt(Employee::getSalary)
+                    .reversed()
+                    .thenComparing(Employee::getName)
+        );
 
         for (Employee employee : staff) {
             System.out.println(employee);
