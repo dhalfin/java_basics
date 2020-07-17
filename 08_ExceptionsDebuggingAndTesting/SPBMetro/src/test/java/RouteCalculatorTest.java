@@ -1,6 +1,7 @@
 import core.Line;
 import core.Station;
 import junit.framework.TestCase;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -9,7 +10,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class RouteCalculatorTest extends TestCase {
+@Test
+public class RouteCalculatorTest {
 
     public RouteCalculator routeCalculator;
     public StationIndex stationIndex;

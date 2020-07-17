@@ -29,11 +29,11 @@ public class Main {
                 } else {
                     System.out.println(commandError);
                 }
-            } catch (IllegalArgumentException e) {
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
-            } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("Empty command");
-            }
+            } //catch (ArrayIndexOutOfBoundsException e) {
+//                System.out.println("Empty command");
+//            }
         }
     }
 }

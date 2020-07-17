@@ -8,17 +8,17 @@ public class CustomerStorage {
         storage = new HashMap<>();
     }
 
-    public void addCustomer(String data) {
+    public void addCustomer(String data) throws EmailNotValidException, NumberNotValidException {
         String[] components = data.split("\\s+");
         String name = components[0] + " " + components[1];
         if (components.length != 4) {
             throw new IllegalArgumentException("Неверный формат ввода.\nBeрный формат: add Василий Петров vasiliy.petrov@gmail.com +79261234567");
         }
         if (!Pattern.compile(".+@.+\\..+").matcher(components[2]).matches()) {
-            throw new IllegalArgumentException("Электронная почта некорректного вида, введите почту правильно aaaa@aaa.aa");
+            throw new EmailNotValidException("Электронная почта некорректного вида, введите почту правильно aaaa@aaa.aa");
         }
         if (!Pattern.compile("\\+7\\d{10}").matcher(components[3]).matches()) {
-            throw new IllegalArgumentException("Номер телефона не соответсвует формату, введите телефон правильно +71111111111 ");
+            throw new NumberNotValidException("Номер телефона не соответсвует формату, введите телефон правильно +71111111111 ");
         }
         storage.put(name, new Customer(name, components[3], components[2]));
     }

@@ -17,23 +17,27 @@ import java.util.Scanner;
 public class Main {
     private static String dataFile = "src/main/resources/map.json";
     private static Scanner scanner;
-    private static StationIndex stationIndex;
-    private static final Logger LOGGER = LogManager.getLogger(Main.class);
-    private static final Marker INPUT_ENTRY_MARKER = MarkerManager.getMarker("INPUT_ENTRY");
-    private static final Marker INVALID_STATIONS_MARKER = MarkerManager.getMarker("INVALID_STATIONS");
-    private static final Marker EXCEPTION_MARKER = MarkerManager.getMarker("EXCEPTIONS");
 
+    private static StationIndex stationIndex;
+
+    private static final Logger LOGGER = LogManager.getLogger(Main.class);
+
+    private static final Marker INPUT_HISTORY_MARKER = MarkerManager.getMarker("INPUT_HISTORY");
+    private static final Marker INVALID_STATIONS_MARKER = MarkerManager.getMarker("INVALID_STATIONS");
+    private static final Marker ERROR_MARKER = MarkerManager.getMarker("ERRORS");
 
     public static void main(String[] args) {
         RouteCalculator calculator = getRouteCalculator();
+
         System.out.println("Программа расчёта маршрутов метрополитена Санкт-Петербурга\n");
         scanner = new Scanner(System.in);
         for (; ; ) {
             try {
                 Station from = takeStation("Введите станцию отправления:");
-                LOGGER.info(INPUT_ENTRY_MARKER, "Станция отправления {}", from);
+                LOGGER.info(INPUT_HISTORY_MARKER, "popular station from {}", from);
                 Station to = takeStation("Введите станцию назначения:");
-                LOGGER.info(INPUT_ENTRY_MARKER, "Станция назначения {}", to);
+                LOGGER.info(INPUT_HISTORY_MARKER, "popular station to {}", to);
+
 
                 List<Station> route = calculator.getShortestRoute(from, to);
                 System.out.println("Маршрут:");
@@ -42,7 +46,7 @@ public class Main {
                 System.out.println("Длительность: " +
                         RouteCalculator.calculateDuration(route) + " минут");
             } catch (Exception e) {
-                LOGGER.error(EXCEPTION_MARKER, "Ошибка ");
+                LOGGER.error(ERROR_MARKER, "Error ");
             }
         }
     }
@@ -69,6 +73,7 @@ public class Main {
     }
 
     private static Station takeStation(String message) {
+
         for (; ; ) {
             System.out.println(message);
             String line = scanner.nextLine().trim();
@@ -76,7 +81,7 @@ public class Main {
             if (station != null) {
                 return station;
             }
-            LOGGER.info(INVALID_STATIONS_MARKER, "Станция не найдена {}", line);
+            LOGGER.info(INVALID_STATIONS_MARKER, "not found station {}", line);
             System.out.println("Станция не найдена :(");
         }
     }
@@ -86,10 +91,13 @@ public class Main {
         try {
             JSONParser parser = new JSONParser();
             JSONObject jsonData = (JSONObject) parser.parse(getJsonFile());
+
             JSONArray linesArray = (JSONArray) jsonData.get("lines");
             parseLines(linesArray);
+
             JSONObject stationsObject = (JSONObject) jsonData.get("stations");
             parseStations(stationsObject);
+
             JSONArray connectionsArray = (JSONArray) jsonData.get("connections");
             parseConnections(connectionsArray);
         } catch (Exception ex) {
@@ -107,6 +115,7 @@ public class Main {
                 JSONObject itemObject = (JSONObject) item;
                 int lineNumber = ((Long) itemObject.get("line")).intValue();
                 String stationName = (String) itemObject.get("station");
+
                 Station station = stationIndex.getStation(stationName, lineNumber);
                 if (station == null) {
                     throw new IllegalArgumentException("core.Station " +
