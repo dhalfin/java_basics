@@ -1,7 +1,7 @@
 import core.Line;
 import core.Station;
-import junit.framework.TestCase;
-import org.junit.Before;
+import org.junit.*;
+import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@Test
+
 public class RouteCalculatorTest {
 
     public RouteCalculator routeCalculator;
@@ -59,16 +59,16 @@ public class RouteCalculatorTest {
     }
 
     @Test
-    public void testCalculateDuration() {
+    public void calculateDuration() {
         stations = Stream.of(firstStop, secondStop, thirdStop, fourthStop, fifthStop, sixthStop, seventhStop, eighthStop, ninthStop)
                 .collect(Collectors.toList());
         double expected = RouteCalculator.calculateDuration(stations);
         double actual = 22;
-        assertEquals(expected, actual);
+        assertEquals(expected, actual,0.0);
     }
 
     @Test
-    public void testGetShortRoutes() {
+    public void getShortRoutes() {
         noConnection = Stream.of(firstStop, secondStop, thirdStop)
                 .collect(Collectors.toList());
         actualResultStationList = routeCalculator.getShortestRoute(firstStop, thirdStop);
@@ -76,7 +76,7 @@ public class RouteCalculatorTest {
     }
 
     @Test
-    public void testGetShortRoutesOneConnection() {
+    public void getShortRoutesOneConnection() {
         oneConnection = Stream.of(firstStop, secondStop, thirdStop, sixthStop, fifthStop)
                 .collect(Collectors.toList());
         actualResultStationList = routeCalculator.getShortestRoute(firstStop, fifthStop);
@@ -84,7 +84,7 @@ public class RouteCalculatorTest {
     }
 
     @Test
-    public void testGetShortRoutesTwoConnection() {
+    public void getShortRoutesTwoConnection() {
         twoConnection = Stream.of(firstStop, secondStop, thirdStop, sixthStop, fifthStop, fourthStop, seventhStop, eighthStop)
                 .collect(Collectors.toList());
         actualResultStationList = routeCalculator.getShortestRoute(firstStop, eighthStop);

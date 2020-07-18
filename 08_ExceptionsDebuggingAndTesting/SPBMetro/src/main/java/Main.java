@@ -2,8 +2,6 @@ import core.Line;
 import core.Station;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.Marker;
-import org.apache.logging.log4j.MarkerManager;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -15,25 +13,23 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    private static Logger logger;
     private static String dataFile = "src/main/resources/map.json";
     private static Scanner scanner;
+
     private static StationIndex stationIndex;
-    private static final Logger LOGGER = LogManager.getLogger(Main.class);
-    private static final Marker INPUT_ENTRY_MARKER = MarkerManager.getMarker("INPUT_ENTRY");
-    private static final Marker INVALID_STATIONS_MARKER = MarkerManager.getMarker("INVALID_STATIONS");
-    private static final Marker EXCEPTION_MARKER = MarkerManager.getMarker("EXCEPTIONS");
 
+    public static void main(String[] args) throws Exception {
 
-    public static void main(String[] args) {
-        RouteCalculator calculator = getRouteCalculator();
-        System.out.println("Программа расчёта маршрутов метрополитена Санкт-Петербурга\n");
-        scanner = new Scanner(System.in);
-        for (; ; ) {
-            try {
+        try {
+            RouteCalculator calculator = getRouteCalculator();
+            logger = LogManager.getRootLogger();
+
+            System.out.println("Программа расчёта маршрутов метрополитена Санкт-Петербурга\n");
+            scanner = new Scanner(System.in);
+            for (; ; ) {
                 Station from = takeStation("Введите станцию отправления:");
-                LOGGER.info(INPUT_ENTRY_MARKER, "Станция отправления {}", from);
                 Station to = takeStation("Введите станцию назначения:");
-                LOGGER.info(INPUT_ENTRY_MARKER, "Станция назначения {}", to);
 
                 List<Station> route = calculator.getShortestRoute(from, to);
                 System.out.println("Маршрут:");
@@ -41,9 +37,10 @@ public class Main {
 
                 System.out.println("Длительность: " +
                         RouteCalculator.calculateDuration(route) + " минут");
-            } catch (Exception e) {
-                LOGGER.error(EXCEPTION_MARKER, "Ошибка ");
             }
+
+        } catch (Exception e) {
+            logger.error(e);
         }
     }
 
@@ -74,9 +71,11 @@ public class Main {
             String line = scanner.nextLine().trim();
             Station station = stationIndex.getStation(line);
             if (station != null) {
+                logger.info("Искали станцию - " + line);
                 return station;
+            } else {
+                logger.debug("Станиция не найдена " + line);
             }
-            LOGGER.info(INVALID_STATIONS_MARKER, "Станция не найдена {}", line);
             System.out.println("Станция не найдена :(");
         }
     }
@@ -86,10 +85,13 @@ public class Main {
         try {
             JSONParser parser = new JSONParser();
             JSONObject jsonData = (JSONObject) parser.parse(getJsonFile());
+
             JSONArray linesArray = (JSONArray) jsonData.get("lines");
             parseLines(linesArray);
+
             JSONObject stationsObject = (JSONObject) jsonData.get("stations");
             parseStations(stationsObject);
+
             JSONArray connectionsArray = (JSONArray) jsonData.get("connections");
             parseConnections(connectionsArray);
         } catch (Exception ex) {
@@ -107,6 +109,7 @@ public class Main {
                 JSONObject itemObject = (JSONObject) item;
                 int lineNumber = ((Long) itemObject.get("line")).intValue();
                 String stationName = (String) itemObject.get("station");
+
                 Station station = stationIndex.getStation(stationName, lineNumber);
                 if (station == null) {
                     throw new IllegalArgumentException("core.Station " +
