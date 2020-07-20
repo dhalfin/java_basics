@@ -13,9 +13,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    private static Logger logger;
+
     private static String dataFile = "src/main/resources/map.json";
     private static Scanner scanner;
+    private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     private static StationIndex stationIndex;
 
@@ -23,7 +24,6 @@ public class Main {
 
         try {
             RouteCalculator calculator = getRouteCalculator();
-            logger = LogManager.getRootLogger();
 
             System.out.println("Программа расчёта маршрутов метрополитена Санкт-Петербурга\n");
             scanner = new Scanner(System.in);
@@ -40,7 +40,7 @@ public class Main {
             }
 
         } catch (Exception e) {
-            logger.error(e);
+            LOGGER.error(e);
         }
     }
 
@@ -71,10 +71,10 @@ public class Main {
             String line = scanner.nextLine().trim();
             Station station = stationIndex.getStation(line);
             if (station != null) {
-                logger.info("Искали станцию - " + line);
+                LOGGER.info("Искали станцию - " + line);
                 return station;
             } else {
-                logger.debug("Станиция не найдена " + line);
+                LOGGER.warn("Станиция не найдена " + line);
             }
             System.out.println("Станция не найдена :(");
         }
