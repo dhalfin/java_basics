@@ -7,20 +7,20 @@ import java.util.stream.Collectors;
 
 public class Loader {
 
-    public static List<Client> contractors;
+    public static List<Transaction> contractors;
     private static int PRINT_WIDTH = 107;
 
     public static void main(String[] args) throws IOException {
         String CSV_FILE = "src/main/resources/movementList.csv";
 
         try (FileReader fileReader = new FileReader(CSV_FILE)) {
-            contractors = new CsvToBeanBuilder<Client>(fileReader)
-                    .withType(Client.class)
+            contractors = new CsvToBeanBuilder<Transaction>(fileReader)
+                    .withType(Transaction.class)
                     .build()
                     .parse();
         }
 
-        contractors.stream().collect(Collectors.groupingBy(Client::getNameCompany,
+        contractors.stream().collect(Collectors.groupingBy(Transaction::getNameCompany,
                 Collectors.mapping(Report::fromTransaction,
                         Collectors.reducing(new Report(), Report::merge)
                 )))

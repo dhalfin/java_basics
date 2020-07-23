@@ -4,12 +4,10 @@ import lombok.ToString;
 @Data
 @ToString
 public class Report {
+    private double income;
+    private double withdraw;
 
-
-    double income;
-    double withdraw;
-
-    Report(double income, double withdraw) {
+    public Report(double income, double withdraw) {
         this.income = income;
         this.withdraw = withdraw;
     }
@@ -17,11 +15,11 @@ public class Report {
     public Report() {
     }
 
-    static Report merge(Report r1, Report r2) {
+    public static Report merge(Report r1, Report r2) {
         return new Report(r1.income + r2.income, r1.withdraw + r2.withdraw);
     }
 
-    static Report fromTransaction(Client c) {
+    public static Report fromTransaction(Transaction c) {
         return new Report(transform(c.getComing()), transform(c.getConsumption()));
     }
 

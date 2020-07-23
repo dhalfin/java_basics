@@ -4,7 +4,7 @@ import lombok.ToString;
 
 @Data
 @ToString
-public class Client {
+public class Transaction {
 
     @CsvBindByName(column = "Тип счёта", required = true)
     private String type;
@@ -30,8 +30,8 @@ public class Client {
     @CsvBindByName(column = "Расход", required = true)
     private String expenditure;
 
-    public static String getNameCompany(Client client) {
-        String[] transaction = client.describing.trim().split(" {3,}");
+    public static String getNameCompany(Transaction tr) {
+        String[] transaction = tr.describing.trim().split(" {3,}");
         String[] temp = transaction[1].split("/");
         String[] inputsTemp = temp[temp.length - 1].split("\\\\");
         String inputs = inputsTemp[inputsTemp.length - 1];
